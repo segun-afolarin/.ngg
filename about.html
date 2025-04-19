@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - RMD</title>
+  <link rel="stylesheet" href="about.css" />
+</head>
+<body class="light-mode">
+  <!-- Header Section -->
+  <header class="header">
+    <h1 class="logo">Player Hub</h1>
+    <button id="menuToggle" class="menu-toggle">☰</button>
+    <nav class="nav" id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="video.html">Player Hub</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <button id="toggleMode" title="Toggle Dark/Light Mode">🌓</button>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="about-img">
+      <img src="p0.jpg" alt="RMD's Fun Selfie" />
+    </div>
+    <div class="about-text">
+      <h2>Who is RMD?</h2>
+      <p>Hey there! I'm <strong>Ray Marlin Daniel</strong>, your go-to graphic designer who can't stop talking about football. Seriously, ask anyone, I can go on and on. But hey, it's not all just pixels and playbooks; I bring a lot of laughs and a whole lot of creativity into everything I do.</p>
+      
+      <h3>But wait, there’s more...</h3>
+      <p>When I’m not busy designing logos that make people say "wow," I’m probably on YouTube ranting about the latest football game. You know, the usual: debates over who’s the real GOAT (hint: it’s not who you think), or sharing my thoughts on how your football team might actually be better with a little more *style* (yes, I’m talking about you, Club X!).</p>
+
+      <h3>Fun Fact: I’m not just a graphic designer, I’m also a comedian!</h3>
+      <p>I promise you won’t get bored reading about me. You might even crack a smile! Here are a few quick jokes to get you started:</p>
+      <ul>
+        <li><strong>Why did the footballer bring string to the game?</strong> Because he wanted to tie the score!</li>
+        <li><strong>What do you call a graphic designer who can’t stop making football memes?</strong> A “goal” getter!</li>
+        <li><strong>Why did the ball go to school?</strong> Because it was kicked around too much!</li>
+      </ul>
+      <p>If you want more jokes or want to see more of my designs (which are way more impressive than my jokes), check out my <a href="https://www.youtube.com/@Playerhub-001" class="btn">Portfolio</a> or dive into my YouTube channel, <a href="https://youtube.com/@PlayerHub" target="_blank">Player Hub</a> for a good time!</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 RMD | Player Hub. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const toggle = document.getElementById('toggleMode');
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      document.body.classList.toggle('light-mode');
+      toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌓';
+
+      localStorage.setItem("mode", document.body.classList.contains("dark-mode") ? "dark" : "light");
+    });
+
+    window.addEventListener("load", () => {
+      const savedMode = localStorage.getItem("mode");
+      if (savedMode === "dark") {
+        document.body.classList.add("dark-mode");
+        document.body.classList.remove("light-mode");
+        toggle.textContent = "☀️";
+      } else {
+        document.body.classList.add("light-mode");
+        document.body.classList.remove("dark-mode");
+        toggle.textContent = "🌓";
+      }
+    });
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

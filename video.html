@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Player Hub - Home</title>
+  <link rel="stylesheet" href="video.css" />
+</head>
+<body class="light-mode">
+  <!-- Header Section -->
+  <header class="header">
+    <h1 class="logo">Player Hub</h1>
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <button id="toggleMode" title="Toggle Dark/Light Mode">🌓</button>
+    </nav>
+    <!-- Hamburger Icon -->
+    <button class="hamburger" id="hamburgerMenu">☰</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Welcome to Player Hub</h2>
+    <p>Your ultimate football resource! Watch, learn, and enjoy the game.</p>
+  </section>
+
+  <!-- Video Gallery Section -->
+  <section class="video-gallery">
+    <h2>Featured Videos</h2>
+    <p>Explore RMD's latest videos on football tactics, player insights, and football fun!</p>
+
+    <div class="video-grid">
+      <!-- Video 1 -->
+      <div class="video-item">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/CPeaY6STlNQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="video-info">
+          <h3>Best Goal Celebration</h3>
+          <p>Watch the most exciting and creative goal celebrations in football history!</p>
+        </div>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="video-item">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/W_V21EMzXyo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="video-info">
+          <h3>The Art of Defending</h3>
+          <p>Discover the secrets of effective defending and how top players make crucial tackles.</p>
+        </div>
+      </div>
+      <!-- Video 3 -->
+      <div class="video-item">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/mKD83E1q3Ds" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="video-info">
+          <h3>Best Goal 2024</h3>
+          <p>Relive the most amazing goal of 2024 and why it’s being talked about everywhere!</p>
+        </div>
+      </div>
+
+      <!-- Video 4 -->
+      <div class="video-item">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/oAbpFIGF2gc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="video-info">
+            <h3>Best Football</h3>
+            <p>Watch some of the best football moments, showcasing incredible skills, teamwork, and breathtaking plays!</p>            
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ray Marlin Daniel | Player Hub. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Dark Mode Toggle and Hamburger Menu -->
+  <script>
+    // Toggle Dark Mode
+    document.getElementById("toggleMode").addEventListener("click", function () {
+      const body = document.body;
+      body.classList.toggle("dark-mode");
+      body.classList.toggle("light-mode");
+
+      // Save mode preference to localStorage (so it persists after page reload)
+      if (body.classList.contains("dark-mode")) {
+        localStorage.setItem("mode", "dark");
+      } else {
+        localStorage.setItem("mode", "light");
+      }
+    });
+
+    // Check saved mode preference and apply on page load
+    window.addEventListener("load", () => {
+      const savedMode = localStorage.getItem("mode");
+      if (savedMode === "dark") {
+        document.body.classList.add("dark-mode");
+        document.body.classList.remove("light-mode");
+      } else {
+        document.body.classList.add("light-mode");
+        document.body.classList.remove("dark-mode");
+      }
+    });
+
+    // Toggle Hamburger Menu
+    document.getElementById("hamburgerMenu").addEventListener("click", function () {
+      const nav = document.querySelector(".nav");
+      nav.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>

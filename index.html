@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RMD - Graphic Designer & Football YouTuber</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">Player Hub</h1>
+    <button id="menuToggle" class="menu-toggle">☰</button>
+    <nav class="nav" id="navMenu">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="video.html">Player Hub</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <button id="toggleMode" title="Toggle Dark/Light Mode">🌙</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>🎨 Where Design Meets Football</h2>
+      <p>I’m <strong>Ray Marlin Daniel</strong> — a creative designer and football YouTuber.  
+         From jaw-dropping posters to in-depth game talks, I bring passion to pixels.</p>
+      <div class="cta">
+        <a href="video.html" class="btn">Watch Player Hub</a>
+        <a href="https://www.youtube.com/@Playerhub-001" class="btn-outline">See My Work</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="p0.jpg" alt="RMD Image">
+    </div>
+  </section>
+
+  <section class="featured-work">
+    <h2>Featured Work</h2>
+    <div class="grid">
+      <div class="work-card">
+        <img src="opu.jpg" alt="Poster 1" />
+        <h3>Football Posters</h3>
+        <p>Dynamic designs that capture the thrill of the game.</p>
+      </div>
+      <div class="work-card">
+        <img src="iii.jpg" alt="Poster 2" />
+        <h3>Branding & Logos</h3>
+        <p>Unique visuals that elevate technology brands.</p>
+      </div>
+      <div class="work-card">
+        <img src="hhhhhh.jpg" alt="Poster 3" />
+        <h3>Thumbnails</h3>
+        <p>High-impact thumbnails for standout YouTube videos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="player-hub">
+    <h2>Player Hub Sneak Peek</h2>
+    <p>Catch one of our most talked-about YouTube segments below!</p>
+    <iframe src="https://www.youtube.com/embed/EwB5ImQhgWc" frameborder="0" allowfullscreen></iframe>
+    <div class="cta">
+      <a href="https://www.youtube.com/@Playerhub-001" target="_blank" class="btn">Subscribe Now</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ray Marlin Daniel | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('toggleMode');
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    });
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    transition: background 0.3s, color 0.3s;
+    background: #fff;
+    color: #222;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    color: white;
+    padding: 1rem 2rem;
+    position: relative;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+  }
+  
+  .nav a {
+    color: white;
+    font-weight: 500;
+  }
+  
+  .nav a.active {
+    border-bottom: 2px solid #007bff;
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .about-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    align-items: center;
+  }
+  
+  .about-img {
+    flex: 1;
+    max-width: 500px;
+  }
+  
+  .about-text {
+    flex: 2;
+  }
+  
+  .about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-text h3 {
+    margin-top: 1.5rem;
+    color: #007bff;
+  }
+  
+  .about-text p, ul {
+    margin-top: 1rem;
+    line-height: 1.7;
+  }
+  
+  .about-text ul {
+    padding-left: 1.5rem;
+    list-style: disc;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  /* Footer */
+  footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+  }
+  
+  /* Dark Mode */
+  .dark-mode {
+    background: #111;
+    color: #eee;
+  }
+  
+  .dark-mode .btn {
+    background: #3498db;
+  }
+  
+  .dark-mode footer,
+  .dark-mode header {
+    background: #000;
+  }
+  
+  /* Responsive Navigation */
+  @media (max-width: 768px) {
+    .nav {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #111;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem 2rem;
+      display: none;
+      width: 100%;
+    }
+  
+    .nav.show {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .about-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-img {
+      max-width: 100%;
+    }
+  }
+  

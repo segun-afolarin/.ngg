@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact RMD</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body class="light-mode">
+  <!-- Header Section -->
+  <header class="header">
+    <h1 class="logo">player-hub</h1>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="video.html">Player Hub</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" class="active">Contact</a>
+      <button id="toggleMode" title="Toggle Dark/Light Mode">🌓</button>
+    </nav>
+    <!-- Hamburger Icon -->
+    <button class="hamburger" id="hamburgerMenu">☰</button>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="contact-header">
+      <h2>Get in Touch with Ray Marlin Daniel</h2>
+      <p>If you have any questions, suggestions, or just want to chat about football and design, feel free to reach out! We would love to hear from you.</p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form-container">
+      <form action="mailto:Marlindanielray@gmail.com" method="post" enctype="text/plain" class="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Interactive Map (embedded) -->
+    <div class="contact-map">
+      <h3>Find Us Here:</h3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12004.420484881407!2d3.379202883457661!3d6.524381223573446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104c1e7673b82567%3A0x1d9d3b140e736ea5!2sLekki%20Phase%201%2C%20Lagos%2C%20Nigeria!5e0!3m2!1sen!2sus!4v1673136789652!5m2!1sen!2sus"
+        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Ray Marlin Daniel | Player Hub. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Dark Mode Toggle and Hamburger Menu -->
+  <script>
+    // Toggle Dark Mode
+    document.getElementById("toggleMode").addEventListener("click", function () {
+      const body = document.body;
+      body.classList.toggle("dark-mode");
+      body.classList.toggle("light-mode");
+
+      // Save mode preference to localStorage (so it persists after page reload)
+      if (body.classList.contains("dark-mode")) {
+        localStorage.setItem("mode", "dark");
+      } else {
+        localStorage.setItem("mode", "light");
+      }
+    });
+
+    // Check saved mode preference and apply on page load
+    window.addEventListener("load", () => {
+      const savedMode = localStorage.getItem("mode");
+      if (savedMode === "dark") {
+        document.body.classList.add("dark-mode");
+        document.body.classList.remove("light-mode");
+      } else {
+        document.body.classList.add("light-mode");
+        document.body.classList.remove("dark-mode");
+      }
+    });
+
+    // Toggle Hamburger Menu
+    document.getElementById("hamburgerMenu").addEventListener("click", function () {
+      const nav = document.querySelector(".nav");
+      nav.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
