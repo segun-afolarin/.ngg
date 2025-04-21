@@ -3,91 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Top Football Players - Player Hub</title>
-  <link rel="stylesheet" href="blog.css"/>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <title>Top Football Players - RMD Hub</title>
+  <link rel="stylesheet" href="blog.css" />
 </head>
 <body>
+
   <header>
-    <h1><i class="fas fa-user"></i> Top Football Players</h1>
+    <h1>Top Football Players</h1>
     <div class="nav-controls">
-      <button id="modeToggle" aria-label="Toggle Dark Mode">🌙</button>
-      <button id="hamburger" aria-label="Menu">&#9776;</button>
+      <button class="menu-toggle" onclick="toggleNav()" id="menuBtn">☰</button>
+      <button onclick="toggleDarkMode()">🌙</button>
     </div>
-    <nav id="navMenu">
+    <nav id="navbar">
       <ul>
-        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="about.html"><i class="fas fa-newspaper"></i> About</a></li>
-        <li><a href="video.html"><i class="fas fa-file-alt"></i>Player hub</a></li>
-        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="videos.html">🎬 Videos</a></li>
+        <li><a href="contact.html">📞 Contact</a></li>
+        <li><a href="about.html">👤 About</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2><i class="fas fa-star"></i> Football Legends & Rising Stars</h2>
-      <p>Explore the most talented football players from around the world, including legendary figures and emerging stars.</p>
-
-      <div class="players-grid">
-        <div class="player-card">
-          <img src="image/mess.jpg" alt="Lionel Messi">
-          <h3>Lionel Messi</h3>
-          <p>One of the greatest players of all time, with multiple Ballon d'Or titles and a historic career at Barcelona and PSG.</p>
-          <a href="https://www.youtube.com/@Playerhub-001" class="btn"><i class="fas fa-info-circle"></i> Learn More</a>
-        </div>
-        <div class="player-card">
-          <img src="image/ronaldo.jpg" alt="Cristiano Ronaldo">
-          <h3>Cristiano Ronaldo</h3>
-          <p>A global icon known for his goal-scoring ability and athleticism at Manchester United, Real Madrid, and more.</p>
-          <a href="https://www.youtube.com/@Playerhub-001" class="btn"><i class="fas fa-info-circle"></i> Learn More</a>
-        </div>
-        <div class="player-card">
-          <img src="image/neymar.jpg" alt="Neymar Jr">
-          <h3>Neymar Jr</h3>
-          <p>One of the most skillful and entertaining players, known for his dribbling and flair at Barcelona, PSG, and Brazil.</p>
-          <a href="https://www.youtube.com/@Playerhub-001" class="btn"><i class="fas fa-info-circle"></i> Learn More</a>
-        </div>
-        <div class="player-card">
-          <img src="image/ky.jpg" alt="Kylian Mbappe">
-          <h3>Kylian Mbappe</h3>
-          <p>A young superstar with blistering speed and incredible finishing ability, leading the new generation of footballers.</p>
-          <a href="https://www.youtube.com/@Playerhub-001" class="btn"><i class="fas fa-info-circle"></i> Learn More</a>
-        </div>
-        <div class="player-card">
-          <img src="image/halll.jpg" alt="Erling Haaland">
-          <h3>Erling Haaland</h3>
-          <p>A goal-scoring machine dominating European football with his strength, speed, and clinical finishing.</p>
-          <a href="https://www.youtube.com/@Playerhub-001" class="btn"><i class="fas fa-info-circle"></i> Learn More</a>
-        </div>
-      </div>
-    </section>
+    <h2>Legendary & Rising Stars in Football</h2>
+    <div class="players-grid">
+      <img src="image/ronaldo.jpg" alt="Cristiano Ronaldo">
+      <h3>Cristiano Ronaldo</h3>
+      <p><strong>Club:</strong> Al-Nassr</p>
+      <p><strong>Position:</strong> Forward</p>
+      <p class="bio">One of the greatest footballers of all time, Ronaldo is known for his speed, power, and unmatched goal-scoring ability. He's played for top clubs like Manchester United, Real Madrid, and Juventus.</p>
+      <button class="toggle-bio-btn" onclick="toggleBio(this)">Show Bio</button>
+    </div>
+    
+    <!-- Player 2 -->
+    <div class="player-card">
+      <img src="image/mess.jpg" alt="Lionel Messi">
+      <h3>Lionel Messi</h3>
+      <p><strong>Club:</strong> Inter Miami</p>
+      <p><strong>Position:</strong> Forward</p>
+      <p class="bio">Often regarded as the GOAT, Messi's vision, dribbling, and playmaking are unrivaled. Winner of multiple Ballon d'Or titles and the 2022 World Cup.</p>
+      <button class="toggle-bio-btn" onclick="toggleBio(this)">Show Bio</button>
+    </div>
+    
+    <!-- Player 3 -->
+    <div class="player-card">
+      <img src="image/halll.jpg" alt="Erling Haaland">
+      <h3>Erling Haaland</h3>
+      <p><strong>Club:</strong> Manchester City</p>
+      <p><strong>Position:</strong> Striker</p>
+      <p class="bio">A goal machine! Haaland is known for his power, pace, and deadly finishing. Already breaking records at a young age.</p>
+      <button class="toggle-bio-btn" onclick="toggleBio(this)">Show Bio</button>
+    </div>
+    
+    <!-- Player 4: Kylian Mbappé -->
+    <div class="player-card">
+      <img src="image/ky.jpg" alt="Kylian Mbappé">
+      <h3>Kylian Mbappé</h3>
+      <p><strong>Club:</strong> Paris Saint-Germain</p>
+      <p><strong>Position:</strong> Forward</p>
+      <p class="bio">Kylian Mbappé, one of the brightest stars of football, is known for his blistering speed, excellent dribbling, and lethal finishing. He already has a World Cup under his belt and continues to dominate the football world.</p>
+      <button class="toggle-bio-btn" onclick="toggleBio(this)">Show Bio</button>
+    </div>
+    
+    <!-- Player 5: Neymar Jr -->
+    <div class="player-card">
+      <img src="image/neymar.jpg" alt="Neymar Jr">
+      <h3>Neymar Jr</h3>
+      <p><strong>Club:</strong> Al-Hilal</p>
+      <p><strong>Position:</strong> Forward</p>
+      <p class="bio">A dazzling dribbler and playmaker, Neymar has been a key player for Brazil and top clubs like Barcelona and Paris Saint-Germain.</p>
+      <button class="toggle-bio-btn" onclick="toggleBio(this)">Show Bio</button>
+    </div>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Player Hub | All rights reserved</p>
+    &copy; 2025 RMD Football Hub. Designed by Segun.
   </footer>
 
-  <script>
-    const toggleBtn = document.getElementById('modeToggle');
-    const body = document.body;
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('navMenu');
-
-    toggleBtn.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
-    });
-
-    window.addEventListener('load', () => {
-      if (localStorage.getItem('theme') === 'dark') {
-        body.classList.add('dark-mode');
-      }
-    });
-
-    hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
-  </script>
+  <script src="blog.js"></script>
 </body>
 </html>
