@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Journey – RMD</title>
+  <link rel="stylesheet" href="award.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="light-mode">
+  <header class="header">
+    <h1 class="logo">player-hub</h1>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="video.html">Player Hub</a>
+      <a href="blog.html">Players</a>
+      <a href="contact.html">Contact</a>
+      <a href="award.html" class="active">Awards</a>
+      <button id="toggleMode" title="Toggle Dark/Light Mode">🌓</button>
+    </nav>
+    <button class="hamburger" id="hamburgerMenu">☰</button>
+  </header>
+
+  <section class="award-section">
+    <h2 class="section-title">My Journey So Far</h2>
+    <p class="intro-text">
+      Yo! I’m <strong>RMD</strong> – the guy who’s always hyped about football and crazy about design. I might not have a shelf full of shiny awards (yet), but guess what? Every view, every subscriber, every comment from YOU feels like a win to me. I’m not just here to entertain — I’m here to build a movement. This is more than content — this is passion.🔥
+    </p>
+
+    <p class="speech-text">
+      I started with zero. No mic. No studio. Just ideas, a phone, and the hunger to speak up about the game I love. And now, here we are. Over <strong>67 videos</strong>, <strong>742 amazing subscribers</strong> — and we’re only getting started.
+    </p>
+
+    <p class="cta-text">
+      If you’re new here — hit that <strong>Subscribe</strong> button and join the family. Let’s grow this channel into something legendary. 💪⚽
+    </p>
+
+    <div class="award-container">
+      <div class="award-card">
+        <div class="icon">🎥</div>
+        <h3>67 Videos Uploaded</h3>
+        <p>Every video is a story — from breakdowns to match reactions, I’m here to keep it real with you. And I’m just getting warmed up.</p>
+      </div>
+
+      <div class="award-card">
+        <div class="icon">📣</div>
+        <h3>742 Subscribers</h3>
+        <p>You're not just a number — you're part of the squad. Thank you for believing in me. Let’s hit 1K together!</p>
+      </div>
+
+      <div class="award-card">
+        <div class="icon">🔥</div>
+        <h3>Consistency Trophy</h3>
+        <p>No matter the stress, I keep showing up. Because I know someone out there needs that one video. That’s dedication.</p>
+      </div>
+
+      <div class="award-card">
+        <div class="icon">💬</div>
+        <h3>Fan Love Award</h3>
+        <p>Your support? It means everything. Every like, every comment — you keep me going. This one's for YOU.</p>
+      </div>
+    </div>
+
+    <div class="subscribe-cta">
+      <h3>Let’s Hit 1K Subscribers! 🚀</h3>
+      <p>If you believe in passion, hustle, and good football talk — <strong>subscribe now</strong>. Be part of the story. Be part of the RMD family.</p>
+      <a href="https://www.youtube.com/@Playerhub-001" target="_blank" class="subscribe-btn">Subscribe on YouTube</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ray Marlin Daniel | Player Hub. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("toggleMode").addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      document.body.classList.toggle("light-mode");
+      localStorage.setItem("mode", document.body.classList.contains("dark-mode") ? "dark" : "light");
+    });
+
+    window.addEventListener("load", () => {
+      const savedMode = localStorage.getItem("mode");
+      document.body.classList.toggle("dark-mode", savedMode === "dark");
+      document.body.classList.toggle("light-mode", savedMode !== "dark");
+    });
+
+    document.getElementById("hamburgerMenu").addEventListener("click", () => {
+      document.querySelector(".nav").classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
